@@ -139,7 +139,7 @@ require'lspconfig'.gopls.setup {
 -- ###############################################
 -- GitHub Copilot Setup
 -- ###############################################
-
+--[[
 vim.g.copilot_node_command = "~/.nvm/versions/node/v16.18.1/bin/node"
 vim.g.copilot_filetypes = {
   ["*"] = false,
@@ -154,5 +154,5 @@ vim.g.copilot_filetypes = {
 vim.keymap.set('i', '<M-.>', '<Plug>(copilot-next)')
 vim.keymap.set('i', '<M-,>', '<Plug>(copilot-previous)')
 vim.api.nvim_set_keymap('i', '<M-/>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
-
+--]]
 
