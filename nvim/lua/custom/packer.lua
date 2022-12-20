@@ -17,10 +17,12 @@ return require('packer').startup(function(use)
     use({ 'navarasu/onedark.nvim',
         as = 'onedark',
     })
+    use({ "ellisonleao/gruvbox.nvim",
+        as = 'gruvbox'})
     --use({ 'olimorris/onedarkpro.nvim', 
     --    as = 'onedarkpro'
     --})
-    use({ 'rose-pine/neovim', 
+    use({ 'rose-pine/neovim',
         as = 'rose-pine',
     })
 
