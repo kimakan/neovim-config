@@ -11,7 +11,13 @@ require("gruvbox").setup({
     inverse = true, -- invert background for search, diffs, statuslines and errors
     contrast = "hard", -- can be "hard", "soft" or empty string
     palette_overrides = {},
-    overrides = {},
+    overrides = {
+        String = { fg = "#98bb36", italic = true },
+        DiagnosticVirtualTextError = { fg = "#96241a" },
+        DiagnosticVirtualTextWarn = { fg = "#856718" },
+        DiagnosticVirtualTextInfo = { fg = "#415354" },
+        DiagnosticVirtualTextHint = { fg = "#476046" }
+    },
     dim_inactive = false,
     transparent_mode = false,
 })
