@@ -15,8 +15,8 @@ require("gruvbox").setup({
         String = { fg = "#98bb36", italic = true },
         DiagnosticVirtualTextError = { fg = "#96241a" },
         DiagnosticVirtualTextWarn = { fg = "#856718" },
-        DiagnosticVirtualTextInfo = { fg = "#415354" },
-        DiagnosticVirtualTextHint = { fg = "#476046" }
+        DiagnosticVirtualTextInfo = { fg = "#076698" },
+        DiagnosticVirtualTextHint = { fg = "#5e906c" }
     },
     dim_inactive = false,
     transparent_mode = false,
