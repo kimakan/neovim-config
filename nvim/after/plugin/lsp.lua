@@ -2,13 +2,22 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
+lsp.ensure_installed({
+  'tsserver',
+  'eslint',
+  'sumneko_lua',
+  'rust_analyzer',
+  'pyright',
+})
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 vim.keymap.set('n', '<A-e>', vim.diagnostic.open_float, opts)
+
 require('lspconfig')['pyright'].setup {
     capabilities = capabilities
 }
+
 require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
 }
