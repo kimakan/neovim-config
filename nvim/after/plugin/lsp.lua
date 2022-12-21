@@ -59,6 +59,17 @@ require'lspconfig'.gopls.setup {
     },
 }
 
+
+lsp.set_preferences({
+    suggest_lsp_servers = false,
+    sign_icons = {
+        error = '✘',
+        warn = '▲',
+        hint = '⚑',
+        info = '☀'
+    }
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
