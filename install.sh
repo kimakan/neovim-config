@@ -1,6 +1,6 @@
 
 rm -rf $HOME/.config/nvim
-cp -r ./nvim $HOME/.config/
+cp -r nvim $HOME/.config/
 
 # Install the packer from https://github.com/wbthomason/packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
