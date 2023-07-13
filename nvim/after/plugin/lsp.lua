@@ -7,6 +7,7 @@ lsp.ensure_installed({
   'eslint',
   'rust_analyzer',
   'pyright',
+  'gopls'
 })
 
 -- Set up lspconfig.
