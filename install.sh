@@ -10,3 +10,4 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 echo "Open .config/nvim/lua/custom/packer.lua in NVIM"
 echo "Run ':so'"
 echo "Run ':PackerSync'"
+echo "Run ':TSUpdate'"
