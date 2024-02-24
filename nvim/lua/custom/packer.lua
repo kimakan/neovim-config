@@ -10,18 +10,11 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- Colorschemes
-    use({ 'sainnhe/everforest',
-        as = 'everforest',
-    })
     use({ 'navarasu/onedark.nvim',
         as = 'onedark',
     })
     use({ "ellisonleao/gruvbox.nvim",
         as = 'gruvbox'})
-    --use({ 'olimorris/onedarkpro.nvim', 
-    --    as = 'onedarkpro'
-    --})
 
     use('vim-airline/vim-airline')
 
@@ -31,8 +24,6 @@ return require('packer').startup(function(use)
     use("numToStr/FTerm.nvim")
 
     use('ThePrimeagen/harpoon')
-
-    use('tpope/vim-fugitive')
 
     use({'robitx/gp.nvim',
         config = function()
