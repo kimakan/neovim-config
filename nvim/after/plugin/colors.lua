@@ -17,7 +17,7 @@ require("gruvbox").setup({
     palette_overrides = {},
     overrides = {
         String = { fg = "#98bb36", italic = true },
-        DiagnosticVirtualTextError = { fg = "#96241a" },
+        DiagnosticVirtualTextError = { fg = "#ff241a" },
         DiagnosticVirtualTextWarn = { fg = "#856718" },
         DiagnosticVirtualTextInfo = { fg = "#076698" },
         DiagnosticVirtualTextHint = { fg = "#5e906c" }
