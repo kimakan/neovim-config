@@ -20,4 +20,5 @@ vim.keymap.set({"n"}, "<leader>gb", "<cmd>GpPrepend<cr>", keymapOptions("Prepend
 vim.keymap.set({"n"}, "<leader>gn", "<cmd>GpChatNew vsplit<cr>", keymapOptions("New Chat"))
 vim.keymap.set({"n"}, "<leader>gd", "<cmd>GpChatDelete<cr>", keymapOptions("New Chat"))
 vim.keymap.set({"n"}, "<leader>gr", "<cmd>GpChatRespond<cr>", keymapOptions("New Chat"))
+vim.keymap.set({"n"}, "<leader>gf", "<cmd>GpChatFinder<cr>", keymapOptions("New Chat"))
 vim.keymap.set({"n"}, "<leader>gt", "<cmd>GpChatToggle vsplit<cr>", keymapOptions("Toggle Chat"))
