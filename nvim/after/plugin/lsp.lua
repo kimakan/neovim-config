@@ -3,7 +3,7 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.setup_servers({
-  'tsserver',
+  'ts_ls',
   'eslint',
   'rust_analyzer',
   'pyright',
@@ -17,7 +17,7 @@ require('lspconfig')['pyright'].setup {
     capabilities = capabilities
 }
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['ts_ls'].setup {
     capabilities = capabilities
 }
 
