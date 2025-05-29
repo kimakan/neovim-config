@@ -6,6 +6,22 @@ return {
 			colorscheme = "gruvbox",
 		},
 	},
+	--	{
+	--		"williamboman/mason.nvim",
+	--		opts = {
+	--			ensure_installed = {
+	--				"gofumpt",
+	--				"goimports",
+	--				"gopls",
+	--				"lua-language-server",
+	--				"pyright",
+	--				"prettier",
+	--				"ruff",
+	--				"shfmt",
+	--				"stylua",
+	--			},
+	--		},
+	--	},
 	{
 		"folke/snacks.nvim",
 		opts = {
