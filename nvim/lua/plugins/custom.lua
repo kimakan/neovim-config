@@ -1,27 +1,70 @@
 return {
-	{ "ellisonleao/gruvbox.nvim" },
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+		opts = {
+			overrides = {
+				-- base diagnostic text
+				DiagnosticError = { fg = "#9e2d20" }, -- greyed red
+				DiagnosticWarn = { fg = "#b57614" }, -- greyed yellow
+				DiagnosticInfo = { fg = "#5f8787" }, -- greyed blue
+				DiagnosticHint = { fg = "#6f8f7f" }, -- greyed aqua
+				DiagnosticOk = { fg = "#8f9a3c" }, -- greyed green
+
+				-- virtual text (slightly more muted)
+				DiagnosticVirtualTextError = { fg = "#9e2d20" },
+				DiagnosticVirtualTextWarn = { fg = "#9c7a18" },
+				DiagnosticVirtualTextInfo = { fg = "#507c7c" },
+				DiagnosticVirtualTextHint = { fg = "#5f7f6f" },
+				DiagnosticVirtualTextOk = { fg = "#7f873a" },
+
+				-- floating diagnostics
+				DiagnosticFloatingError = { fg = "#9e2d20" },
+				DiagnosticFloatingWarn = { fg = "#b57614" },
+				DiagnosticFloatingInfo = { fg = "#5f8787" },
+				DiagnosticFloatingHint = { fg = "#6f8f7f" },
+				DiagnosticFloatingOk = { fg = "#8f9a3c" },
+			},
+		},
+	},
 	{
 		"LazyVim/LazyVim",
 		opts = {
 			colorscheme = "gruvbox",
 		},
 	},
-	--	{
-	--		"williamboman/mason.nvim",
-	--		opts = {
-	--			ensure_installed = {
-	--				"gofumpt",
-	--				"goimports",
-	--				"gopls",
-	--				"lua-language-server",
-	--				"pyright",
-	--				"prettier",
-	--				"ruff",
-	--				"shfmt",
-	--				"stylua",
-	--			},
-	--		},
-	--	},
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			servers = {
+				basedpyright = {
+					settings = {
+						basedpyright = {
+							analysis = {
+								diagnosticSeverityOverrides = {
+									reportMissingParameterType = false,
+									reportMissingTypeStubs = false,
+									reportUnannotatedClassAttribute = false,
+									reportUnknownArgumentType = false,
+									reportUnknownMemberType = false,
+									reportUnknownParameterType = false,
+									reportUnknownVariableType = false,
+									reportUnreachable = false,
+								},
+								inlayHints = {
+									callArgumentNames = false, -- the grey arg names
+									functionReturnTypes = false,
+									variableTypes = false,
+									genericTypes = false,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	},
 	{
 		"folke/snacks.nvim",
 		opts = {
