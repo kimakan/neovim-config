@@ -37,12 +37,14 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
+      inlay_hints = { enabled = false },
 			servers = {
 				basedpyright = {
 					settings = {
 						basedpyright = {
 							analysis = {
 								diagnosticSeverityOverrides = {
+									reportAny = false,
 									reportMissingParameterType = false,
 									reportMissingTypeStubs = false,
 									reportUnannotatedClassAttribute = false,
@@ -51,12 +53,6 @@ return {
 									reportUnknownParameterType = false,
 									reportUnknownVariableType = false,
 									reportUnreachable = false,
-								},
-								inlayHints = {
-									callArgumentNames = false, -- the grey arg names
-									functionReturnTypes = false,
-									variableTypes = false,
-									genericTypes = false,
 								},
 							},
 						},
