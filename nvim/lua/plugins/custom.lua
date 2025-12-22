@@ -53,6 +53,7 @@ return {
 									reportUnknownParameterType = false,
 									reportUnknownVariableType = false,
 									reportUnreachable = false,
+									reportUnusedParameter = false,
 								},
 							},
 						},
