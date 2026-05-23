@@ -37,8 +37,19 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
-      inlay_hints = { enabled = false },
+			inlay_hints = { enabled = false },
 			servers = {
+				["*"] = {
+					capabilities = {
+						textDocument = {
+							semanticTokens = {
+								multilineTokenSupport = true,
+								tokenTypes = {},
+								tokenModifiers = {},
+							},
+						},
+					},
+				},
 				basedpyright = {
 					settings = {
 						basedpyright = {
@@ -74,11 +85,11 @@ return {
 			presets = {
 				lsp_doc_border = true,
 			},
-      lsp = {
-        progress = {
-          enabled = false,
-        },
-      },
+			lsp = {
+				progress = {
+					enabled = false,
+				},
+			},
 		},
 	},
 	{
